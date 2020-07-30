@@ -1,8 +1,8 @@
-.vscode/
-.hooks/
-.node_modules/
-.platforms/android
-.plugins/
-.typings/
+/.vscode/*
+/hooks/*
+/node_modules/*
+/platforms/*
+/plugins/*
+/typings/*
 *.xml
 *.json
