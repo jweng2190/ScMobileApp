@@ -1,0 +1,7 @@
+.vscode/
+.hooks/
+.node_modules/
+.platforms/android
+.plugins/
+.typings/
+*.xml
