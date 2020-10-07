@@ -14,6 +14,12 @@ document.getElementById("ok-button").addEventListener("click", function (event) 
     options,
     function(response) {
         console.log(response.data);
+        var data = JSON.parse(response.data);
+        if(data['success'] === true) {
+            userId = data['user_id'];
+            localStorage.userId = userId;
+            window.location.href = "home.html";
+         }
     },
     function(response) {
         console.error(response.error);
@@ -22,4 +28,21 @@ document.getElementById("ok-button").addEventListener("click", function (event) 
     event.preventDefault();
 });
 
+/*function getCurrentUserEvents(userId) {
+    var events;
+    var url = 'http://ec2-3-128-33-255.us-east-2.compute.amazonaws.com/events/user/' + userId;
 
+    const options = {
+        method: 'get'
+    };
+    cordova.plugin.http.sendRequest(url,
+    options,
+    function(response) {
+        console.log(response.data);
+        events = JSON.parse(response.data);
+        window.location.href = "home.html";
+    },
+    function(response) {
+        console.error(response.error);
+    });
+}*/
