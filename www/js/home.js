@@ -4,10 +4,6 @@ window.addEventListener('load', function() {
 
     var events;
     var url = 'http://ec2-3-128-33-255.us-east-2.compute.amazonaws.com/events/user/' + userId;
-    console.log(cordova);
-    console.log(cordova['plugin']);
-    console.log(cordova.plugin);
-    console.log(cordova[plugin]);
 
     const opt = {
         method: 'get'
